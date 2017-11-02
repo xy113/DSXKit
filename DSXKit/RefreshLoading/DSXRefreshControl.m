@@ -47,7 +47,7 @@ NSString *const DSXRefreshStateRefreshingText = @"正在努力刷新中..";
         [self addSubview:_timeLabel];
         
         _imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 17, 40)];
-        _imageView.image = [UIImage imageWithBundleName:@"DSXUI" imageName:@"arrow.png"];;
+        _imageView.image = [UIImage imageWithBundleName:@"DSXKit" imageName:@"arrow.png"];
         [self addSubview:_imageView];
         
         _indicator = [[UIActivityIndicatorView alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];

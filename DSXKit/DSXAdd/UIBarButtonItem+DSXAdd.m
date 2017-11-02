@@ -59,7 +59,7 @@
         default: imageName = @"icon-more.png";
             break;
     }
-    UIImage *image = [UIImage imageWithBundleName:@"DSXUI" imageName:imageName];
+    UIImage *image = [UIImage imageWithBundleName:@"DSXKit" imageName:imageName];
     return [[UIBarButtonItem alloc] initWithImage:image style:UIBarButtonItemStylePlain target:target action:action];
 }
 

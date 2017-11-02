@@ -77,7 +77,7 @@ static const NSString *DSXActivityViewKey = @"DSXActivityViewKey";
 
 - (void)showToast:(NSString *)message image:(UIImage *)image duration:(NSTimeInterval)duration completion:(void (^)(BOOL))completion{
     if (image == nil) {
-        image = [UIImage imageWithBundleName:@"DSXUI" imageName:@"icon-success"];
+        image = [UIImage imageWithBundleName:@"DSXKit" imageName:@"icon-success"];
     }
     
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 40, 40)];
@@ -144,27 +144,27 @@ static const NSString *DSXActivityViewKey = @"DSXActivityViewKey";
     UIImage *image;
     switch (style) {
             case DSXToastStyleSuccess:
-            image = [UIImage imageNamed:@"DSXUI.bundle/toast-success"];
+            image = [UIImage imageNamed:@"DSXKit.bundle/toast-success"];
             break;
             
             case DSXToastStyleError:
-            image = [UIImage imageNamed:@"DSXUI.bundle/toast-error"];
+            image = [UIImage imageNamed:@"DSXKit.bundle/toast-error"];
             break;
             
             case DSXToastStyleQuestion:
-            image = [UIImage imageNamed:@"DSXUI.bundle/toast-question"];
+            image = [UIImage imageNamed:@"DSXKit.bundle/toast-question"];
             break;
             
             case DSXToastStyleInfomation:
-            image = [UIImage imageNamed:@"DSXUI.bundle/toast-infomation"];
+            image = [UIImage imageNamed:@"DSXKit.bundle/toast-infomation"];
             break;
             
             case DSXToastStyleWarn:
-            image = [UIImage imageNamed:@"DSXUI.bundle/toast-warn"];
+            image = [UIImage imageNamed:@"DSXKit.bundle/toast-warn"];
             break;
             
         default:
-            image = [UIImage imageNamed:@"DSXUI.bundle/toast-success"];
+            image = [UIImage imageNamed:@"DSXKit.bundle/toast-success"];
             break;
     }
     [self showToast:message image:image duration:duration completion:completion];

@@ -9,10 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "UIColor+color.h"
 #import "UIScrollView+Refresh.h"
+#import "WebViewJavascriptBridge.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@class WebViewJavascriptBridge;
 @interface DSXUIWebViewController : UIViewController<UIWebViewDelegate>
 
 @property(nonatomic, readonly) UIWebView *webView;
