@@ -6,8 +6,22 @@
 //  Copyright © 2016年 Apple. All rights reserved.
 //
 
+//定义屏幕宽度
+#ifndef SCREEN_WIDTH
+#define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
+#endif
+//定义屏幕高度
+#ifndef SCREEN_HEIGHT
+#define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
+#endif
+//定义顶部高度
+#ifndef TOP_HEIGHT
+#define TOP_HEIGHT [[UIApplication sharedApplication] statusBarFrame].size.height+self.navigationController.navigationBar.frame.size.height
+#endif
+
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
+#import "UIView+Size.h"
 
 @class DSXDatePicker;
 @protocol DSXDatePickerDelegate <NSObject>

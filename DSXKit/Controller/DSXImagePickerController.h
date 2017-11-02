@@ -9,6 +9,10 @@
 #import <UIKit/UIKit.h>
 #import <AssetsLibrary/AssetsLibrary.h>
 #import <Photos/Photos.h>
+#import "UIImage+DSXAdd.h"
+#import "UIView+Size.h"
+#import "UIBarButtonItem+DSXAdd.h"
+
 NS_ASSUME_NONNULL_BEGIN
 @interface DSXImagePickerObject : NSObject
 @property(nonatomic, assign)BOOL isChecked;

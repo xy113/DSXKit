@@ -1,6 +1,4 @@
 //
-//  DSXFramework.h
-//  DSXFramework
 //
 //  Created by songdewei on 2016/12/2.
 //  Copyright © 2016年 DashiXiong. All rights reserved.
@@ -22,7 +20,7 @@
 #define IOSVERSION [[[UIDevice currentDevice] systemVersion] floatValue]
 
 #ifndef SITEAPI
-#define SITEAPI @"http://dtjg.liaidicn.com/app.php?"
+#define SITEAPI @""
 
 #endif
 
@@ -32,27 +30,33 @@
 #define DSXLog(...)
 #endif
 
-#import <JavaScriptCore/JavaScriptCore.h>
-#import "DSXURL.h"
-#import "DSXJSON.h"
-#import "DSXApi.h"
-#import "DSXRefreshControl.h"
-#import "DSXNavigationController.h"
-#import "DSXTableViewController.h"
-#import "NSString+Encryption.h"
-#import "NSString+Validate.h"
+#import <Foundation/Foundation.h>
+
 #import "UIColor+color.h"
 #import "UIView+size.h"
-#import "UIScrollView+Touch.h"
-#import "UIScrollView+Refresh.h"
-#import "DSXCookieHelper.h"
-#import "DSXSandboxHelper.h"
-#import "DSXImageManager.h"
-#import "DSXDate.h"
-#import "DSXDatePicker.h"
-#import "DSXSearchBar.h"
-#import "UIImage+Bundle.h"
-#import "DSXBarButtonItem.h"
 #import "NSString+Validate.h"
 #import "NSString+Encryption.h"
+#import "UIScrollView+Touch.h"
+#import "UIScrollView+Refresh.h"
+#import "UIView+toast.h"
 #import "UIViewController+toast.h"
+#import "NSDate+DSXAdd.h"
+#import "NSURL+DSXAdd.h"
+#import "UIImage+DSXAdd.h"
+#import "UILabel+DSXAdd.h"
+#import "NSArray+DSXAdd.h"
+#import "NSDictionary+DSXAdd.h"
+#import "UIAlertController+DSXAdd.h"
+#import "UIBarButtonItem+DSXAdd.h"
+#import "CLLocationManager+DSXAdd.h"
+
+#import "DSXNavigationController.h"
+#import "DSXTableViewController.h"
+#import "DSXUIWebViewController.h"
+#import "DSXWKWebViewController.h"
+#import "DSXCookieHelper.h"
+#import "DSXSandboxHelper.h"
+#import "DSXDatePicker.h"
+#import "DSXSearchBar.h"
+
+

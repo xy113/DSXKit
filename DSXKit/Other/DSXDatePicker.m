@@ -7,6 +7,7 @@
 //
 
 #import "DSXDatePicker.h"
+#import "UIColor+color.h"
 
 @implementation DSXDatePicker
 @synthesize backgroundView = _backgroundView;
@@ -56,7 +57,7 @@
     [_window addSubview:_backgroundView];
     [_window addSubview:_contentView];
     [UIView animateWithDuration:0.3f animations:^{
-        _contentView.originY = SCREEN_HEIGHT - 250;
+        _contentView.left = SCREEN_HEIGHT - 250;
     } completion:^(BOOL finished) {
         
     }];
@@ -65,7 +66,7 @@
 - (void)close{
     [_contentView removeFromSuperview];
     [_backgroundView removeFromSuperview];
-    _contentView.originY = SCREEN_HEIGHT;
+    _contentView.left = SCREEN_HEIGHT;
     if (_delegate && [_delegate respondsToSelector:@selector(dsx_datePickerAfterClose:)]) {
         [_delegate dsx_datePickerAfterClose:self];
     }

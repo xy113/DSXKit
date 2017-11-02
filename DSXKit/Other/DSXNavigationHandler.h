@@ -9,6 +9,7 @@
 #import <MapKit/MapKit.h>
 #import <CoreLocation/CoreLocation.h>
 #import <Foundation/Foundation.h>
+#import "NSString+Encryption.h"
 
 @interface DSXNavigationHandler : NSObject
 

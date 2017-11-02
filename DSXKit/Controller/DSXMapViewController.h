@@ -10,6 +10,7 @@
 #import <MapKit/MapKit.h>
 #import <CoreLocation/CoreLocation.h>
 #import "DSXAnnotation.h"
+#import "UIBarButtonItem+DSXAdd.h"
 
 @interface DSXMapViewController : UIViewController<MKMapViewDelegate>{
     @private

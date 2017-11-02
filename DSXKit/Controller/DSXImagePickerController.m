@@ -69,21 +69,7 @@
     if (self = [super initWithRootViewController:_viewController]) {
         _objectList = [NSMutableArray array];
         _selectedAssets = [NSMutableArray array];
-        if (IOSVERSION < 8.0) {
-            /*
-            ALAssetsLibrary *assetsLibrary = [[ALAssetsLibrary alloc] init];
-            NSMutableArray *groupArray = [[NSMutableArray alloc] init];
-            [assetsLibrary enumerateGroupsWithTypes:ALAssetsGroupAlbum usingBlock:^(ALAssetsGroup *group, BOOL *stop) {
-                if (group) {
-                    [groupArray addObject:group];
-                }
-            } failureBlock:^(NSError *error) {
-                
-            }];
-             */
-        }else {
-            _assetsList = [self getAllAssetInPhotoAblumWithAscending:YES];
-        }
+        _assetsList = [self getAllAssetInPhotoAblumWithAscending:YES];
         
         _textLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.toolbar.frame.size.width, self.toolbar.size.height)];
         _textLabel.font = [UIFont systemFontOfSize:14.0];
@@ -153,7 +139,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _viewController.navigationItem.leftBarButtonItem = [DSXBarButtonItem buttonItemWithStyle:DSXBarButtonItemStyleBack
+    _viewController.navigationItem.leftBarButtonItem = [UIBarButtonItem buttonItemWithStyle:DSXBarButtonItemStyleBack
                                                                                       target:self action:@selector(closeWin)];
     _viewController.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"完成"
                                                                                          style:UIBarButtonItemStylePlain

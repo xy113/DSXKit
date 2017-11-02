@@ -9,14 +9,6 @@
 #import "DSXTableViewController.h"
 
 @implementation DSXTableViewController
-@synthesize tableView = _tableView;
-@synthesize dataList  = _dataList;
-@synthesize moreData  = _moreData;
-@synthesize isRefreshing   = _isRefreshing;
-@synthesize enableRefresh  = _enableRefresh;
-@synthesize enableLoadMore = _enableLoadMore;
-@synthesize refreshHeaderView = _refreshHeaderView;
-@synthesize refreshFooterView = _refreshFooterView;
 
 - (instancetype)init{
     return [self initWithStyle:UITableViewStylePlain];
@@ -29,36 +21,46 @@
         self.isRefreshing = NO;
         _dataList  = [[NSMutableArray alloc] init];
         _tableView = [[UITableView alloc] initWithFrame:CGRectZero style:style];
-        _refreshHeaderView = [[DSXRefreshHeader alloc] init];
-        _refreshFooterView = [[DSXRefreshFooter alloc] init];
+        _dsx_refreshControl = [[DSXRefreshControl alloc] init];
+        _dsx_loadingControl = [[DSXLoadingControl alloc] init];
     }
     return self;
 }
 
-- (void)setEnableRefresh:(BOOL)enableRefresh{
-    _enableRefresh = enableRefresh;
-    if (enableRefresh) {
-        _tableView.dsx_header = _refreshHeaderView;
+- (void)setEnablePullDownRefresh:(BOOL)enablePullDownRefresh{
+    _enablePullDownRefresh = enablePullDownRefresh;
+    if (enablePullDownRefresh) {
+        self.tableView.dsx_refreshControl = self.dsx_refreshControl;
     }else {
-        _tableView.dsx_header = nil;
+        self.tableView.dsx_refreshControl = nil;
     }
 }
 
-- (void)setEnableLoadMore:(BOOL)enableLoadMore{
-    _enableLoadMore = enableLoadMore;
-    if (enableLoadMore) {
-        _tableView.dsx_footer = _refreshFooterView;
+- (void)setEnablePullUpLoadMore:(BOOL)enablePullUpLoadMore{
+    _enablePullUpLoadMore = enablePullUpLoadMore;
+    if (enablePullUpLoadMore) {
+        self.tableView.dsx_loadingControl = self.dsx_loadingControl;
     }else {
-        _tableView.dsx_footer = nil;
+        self.tableView.dsx_loadingControl = nil;
     }
+}
+
+- (void)setRefreshBlock:(void (^)(DSXRefreshControl * _Nonnull))refreshBlock{
+    _refreshBlock = refreshBlock;
+    self.dsx_refreshControl.refreshBlock = refreshBlock;
+}
+
+- (void)setLoadingBlock:(void (^)(DSXLoadingControl * _Nonnull))loadingBlock{
+    _loadingBlock = loadingBlock;
+    self.dsx_loadingControl.loadingBlock = loadingBlock;
 }
 
 - (void)setRefreshTarget:(id)target action:(SEL)action{
-    [_refreshHeaderView setTarget:target action:action];
+    [self.dsx_refreshControl setTarget:target action:action];
 }
 
 - (void)setLoadMoreTarget:(id)target action:(SEL)action{
-    [_refreshFooterView setTarget:target action:action];
+    [self.dsx_loadingControl setTarget:target action:action];
 }
 
 - (void)viewDidLoad{

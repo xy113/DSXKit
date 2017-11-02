@@ -19,9 +19,9 @@
 - (void)viewDidLoad{
     [super viewDidLoad];
     [self setTitle:@"地图"];
-    self.navigationItem.leftBarButtonItem = [DSXBarButtonItem buttonItemWithStyle:DSXBarButtonItemStyleBack
+    self.navigationItem.leftBarButtonItem = [UIBarButtonItem buttonItemWithStyle:DSXBarButtonItemStyleBack
                                                                            target:self action:@selector(back)];
-    self.navigationItem.rightBarButtonItem = [DSXBarButtonItem buttonItemWithStyle:DSXBarButtonItemStyleMore
+    self.navigationItem.rightBarButtonItem = [UIBarButtonItem buttonItemWithStyle:DSXBarButtonItemStyleMore
                                                                             target:self action:nil];
     
     _mapView = [[MKMapView alloc] initWithFrame:self.view.bounds];
