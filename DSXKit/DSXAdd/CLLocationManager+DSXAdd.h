@@ -10,6 +10,7 @@
 
 @interface CLLocationManager(DSXAdd)
 
++ (instancetype)manager;
 - (CLLocationCoordinate2D)coordinate;
 
 @end

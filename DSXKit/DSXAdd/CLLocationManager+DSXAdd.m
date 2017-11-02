@@ -10,6 +10,10 @@
 
 @implementation CLLocationManager(DSXAdd)
 
++ (instancetype)manager{
+    return [[CLLocationManager alloc] init];
+}
+
 - (CLLocationCoordinate2D)coordinate{
     return [[self location] coordinate];
 }

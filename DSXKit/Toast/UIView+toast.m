@@ -77,7 +77,7 @@ static const NSString *DSXActivityViewKey = @"DSXActivityViewKey";
 
 - (void)showToast:(NSString *)message image:(UIImage *)image duration:(NSTimeInterval)duration completion:(void (^)(BOOL))completion{
     if (image == nil) {
-        image = [UIImage imageWithBundleName:@"DSXKit" imageName:@"icon-success"];
+        image = [UIImage imageWithBundleName:@"DSXKit" imageName:@"toast-success"];
     }
     
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 40, 40)];
