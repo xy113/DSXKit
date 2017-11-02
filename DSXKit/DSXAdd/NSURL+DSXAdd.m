@@ -11,7 +11,7 @@
 @implementation NSURL(DSXAdd)
 
 - (void)setParameters:(NSDictionary *)parameters{
-    self.parameters = parameters;
+    
 }
 
 - (NSDictionary *)parameters{
