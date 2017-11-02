@@ -7,11 +7,14 @@
 //
 
 #import "NSURL+DSXAdd.h"
+#import <objc/runtime.h>
+
+const NSString *DSXURLParametersKey = @"DSXURLParametersKey";
 
 @implementation NSURL(DSXAdd)
 
 - (void)setParameters:(NSDictionary *)parameters{
-    
+    objc_setAssociatedObject(self, &DSXURLParametersKey, parameters, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (NSDictionary *)parameters{
