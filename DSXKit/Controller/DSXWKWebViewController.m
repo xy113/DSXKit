@@ -7,6 +7,7 @@
 //
 
 #import "DSXWKWebViewController.h"
+#import "WebViewJavascriptBridge.h"
 
 @implementation DSXWKWebViewController
 - (instancetype)init{

@@ -7,6 +7,7 @@
 //
 
 #import "DSXUIWebViewController.h"
+#import "WebViewJavascriptBridge.h"
 
 @implementation DSXUIWebViewController
 

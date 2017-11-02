@@ -58,13 +58,17 @@
 		71B8CB731FAAF1F0003A82FD /* UIScrollView+Refresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 71B8CB251FAAF1F0003A82FD /* UIScrollView+Refresh.m */; };
 		71B8CB7C1FAAF1F0003A82FD /* UIView+toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 71B8CB3B1FAAF1F0003A82FD /* UIView+toast.m */; };
 		71B8CB7D1FAAF1F0003A82FD /* UIViewController+toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 71B8CB3D1FAAF1F0003A82FD /* UIViewController+toast.m */; };
-		71B8CB7E1FAAF1F0003A82FD /* AESCrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 71B8CB411FAAF1F0003A82FD /* AESCrypt.m */; };
-		71B8CB7F1FAAF1F0003A82FD /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 71B8CB431FAAF1F0003A82FD /* NSData+Base64.m */; };
-		71B8CB801FAAF1F0003A82FD /* NSData+CommonCrypto.m in Sources */ = {isa = PBXBuildFile; fileRef = 71B8CB451FAAF1F0003A82FD /* NSData+CommonCrypto.m */; };
-		71B8CB811FAAF1F0003A82FD /* NSString+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 71B8CB471FAAF1F0003A82FD /* NSString+Base64.m */; };
 		71B8CB821FAAF1F0003A82FD /* NNValidationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 71B8CB4A1FAAF1F0003A82FD /* NNValidationView.m */; };
 		71B8CB831FAAF1F0003A82FD /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 71B8CB4D1FAAF1F0003A82FD /* Reachability.m */; };
 		71B8CB841FAAF1F0003A82FD /* RNCachingURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 71B8CB4F1FAAF1F0003A82FD /* RNCachingURLProtocol.m */; };
+		71C928BE1FAB08BE0035E9E6 /* DSXShare.m in Sources */ = {isa = PBXBuildFile; fileRef = 71C928AC1FAB08BC0035E9E6 /* DSXShare.m */; };
+		71C928BF1FAB08BE0035E9E6 /* DSXShareButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 71C928AE1FAB08BC0035E9E6 /* DSXShareButtonItem.m */; };
+		71C928C01FAB08BE0035E9E6 /* DSXShareMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 71C928B01FAB08BC0035E9E6 /* DSXShareMessage.m */; };
+		71C928C11FAB08BE0035E9E6 /* WXApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 71C928B31FAB08BC0035E9E6 /* WXApiManager.m */; };
+		71C928C21FAB08BE0035E9E6 /* AlipaySDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 71C928B61FAB08BD0035E9E6 /* AlipaySDK.bundle */; };
+		71C928C31FAB08BE0035E9E6 /* AlipaySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71C928B71FAB08BD0035E9E6 /* AlipaySDK.framework */; };
+		71C928C41FAB08BE0035E9E6 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 71C928B91FAB08BD0035E9E6 /* libWeChatSDK.a */; };
+		71C928C51FAB08BE0035E9E6 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 71C928BA1FAB08BD0035E9E6 /* README.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -162,20 +166,27 @@
 		71B8CB3B1FAAF1F0003A82FD /* UIView+toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+toast.m"; sourceTree = "<group>"; };
 		71B8CB3C1FAAF1F0003A82FD /* UIViewController+toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+toast.h"; sourceTree = "<group>"; };
 		71B8CB3D1FAAF1F0003A82FD /* UIViewController+toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+toast.m"; sourceTree = "<group>"; };
-		71B8CB401FAAF1F0003A82FD /* AESCrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AESCrypt.h; sourceTree = "<group>"; };
-		71B8CB411FAAF1F0003A82FD /* AESCrypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AESCrypt.m; sourceTree = "<group>"; };
-		71B8CB421FAAF1F0003A82FD /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
-		71B8CB431FAAF1F0003A82FD /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
-		71B8CB441FAAF1F0003A82FD /* NSData+CommonCrypto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+CommonCrypto.h"; sourceTree = "<group>"; };
-		71B8CB451FAAF1F0003A82FD /* NSData+CommonCrypto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+CommonCrypto.m"; sourceTree = "<group>"; };
-		71B8CB461FAAF1F0003A82FD /* NSString+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Base64.h"; sourceTree = "<group>"; };
-		71B8CB471FAAF1F0003A82FD /* NSString+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Base64.m"; sourceTree = "<group>"; };
 		71B8CB491FAAF1F0003A82FD /* NNValidationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNValidationView.h; sourceTree = "<group>"; };
 		71B8CB4A1FAAF1F0003A82FD /* NNValidationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNValidationView.m; sourceTree = "<group>"; };
 		71B8CB4C1FAAF1F0003A82FD /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		71B8CB4D1FAAF1F0003A82FD /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		71B8CB4E1FAAF1F0003A82FD /* RNCachingURLProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNCachingURLProtocol.h; sourceTree = "<group>"; };
 		71B8CB4F1FAAF1F0003A82FD /* RNCachingURLProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNCachingURLProtocol.m; sourceTree = "<group>"; };
+		71C928AB1FAB08BC0035E9E6 /* DSXShare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSXShare.h; sourceTree = "<group>"; };
+		71C928AC1FAB08BC0035E9E6 /* DSXShare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSXShare.m; sourceTree = "<group>"; };
+		71C928AD1FAB08BC0035E9E6 /* DSXShareButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSXShareButtonItem.h; sourceTree = "<group>"; };
+		71C928AE1FAB08BC0035E9E6 /* DSXShareButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSXShareButtonItem.m; sourceTree = "<group>"; };
+		71C928AF1FAB08BC0035E9E6 /* DSXShareMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSXShareMessage.h; sourceTree = "<group>"; };
+		71C928B01FAB08BC0035E9E6 /* DSXShareMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSXShareMessage.m; sourceTree = "<group>"; };
+		71C928B21FAB08BC0035E9E6 /* WXApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiManager.h; sourceTree = "<group>"; };
+		71C928B31FAB08BC0035E9E6 /* WXApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXApiManager.m; sourceTree = "<group>"; };
+		71C928B61FAB08BD0035E9E6 /* AlipaySDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AlipaySDK.bundle; sourceTree = "<group>"; };
+		71C928B71FAB08BD0035E9E6 /* AlipaySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlipaySDK.framework; sourceTree = "<group>"; };
+		71C928B91FAB08BD0035E9E6 /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
+		71C928BA1FAB08BD0035E9E6 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		71C928BB1FAB08BD0035E9E6 /* WechatAuthSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WechatAuthSDK.h; sourceTree = "<group>"; };
+		71C928BC1FAB08BD0035E9E6 /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
+		71C928BD1FAB08BD0035E9E6 /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
 		C6F0D9935427DAE7AF25642C /* Pods-DSXKitDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DSXKitDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DSXKitDemo/Pods-DSXKitDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		E12BA79C8C6659F09B0FF21A /* Pods-DSXKitDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DSXKitDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-DSXKitDemo/Pods-DSXKitDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -185,7 +196,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71C928C31FAB08BE0035E9E6 /* AlipaySDK.framework in Frameworks */,
 				7120398B1FAAF7D5003906A8 /* AddressBook.framework in Frameworks */,
+				71C928C41FAB08BE0035E9E6 /* libWeChatSDK.a in Frameworks */,
 				7120398A1FAAF7CD003906A8 /* CoreMotion.framework in Frameworks */,
 				712039871FAAF74D003906A8 /* libsqlite3.tbd in Frameworks */,
 				54C741CAFE1B5C776E11FA68 /* libPods-DSXKitDemo.a in Frameworks */,
@@ -250,6 +263,8 @@
 		71B8CAD61FAAF1F0003A82FD /* DSXKit */ = {
 			isa = PBXGroup;
 			children = (
+				71C928B41FAB08BD0035E9E6 /* SDK */,
+				71C928AA1FAB08BC0035E9E6 /* ShareSDK */,
 				71B8CAD71FAAF1F0003A82FD /* Controller */,
 				71B8CAE41FAAF1F0003A82FD /* DSXAdd */,
 				71B8CAFD1FAAF1F0003A82FD /* DSXKit.h */,
@@ -398,26 +413,10 @@
 		71B8CB3E1FAAF1F0003A82FD /* Vender */ = {
 			isa = PBXGroup;
 			children = (
-				71B8CB3F1FAAF1F0003A82FD /* AESCrypt */,
 				71B8CB481FAAF1F0003A82FD /* NNValidationView */,
 				71B8CB4B1FAAF1F0003A82FD /* RNCachingURLProtocol */,
 			);
 			path = Vender;
-			sourceTree = "<group>";
-		};
-		71B8CB3F1FAAF1F0003A82FD /* AESCrypt */ = {
-			isa = PBXGroup;
-			children = (
-				71B8CB401FAAF1F0003A82FD /* AESCrypt.h */,
-				71B8CB411FAAF1F0003A82FD /* AESCrypt.m */,
-				71B8CB421FAAF1F0003A82FD /* NSData+Base64.h */,
-				71B8CB431FAAF1F0003A82FD /* NSData+Base64.m */,
-				71B8CB441FAAF1F0003A82FD /* NSData+CommonCrypto.h */,
-				71B8CB451FAAF1F0003A82FD /* NSData+CommonCrypto.m */,
-				71B8CB461FAAF1F0003A82FD /* NSString+Base64.h */,
-				71B8CB471FAAF1F0003A82FD /* NSString+Base64.m */,
-			);
-			path = AESCrypt;
 			sourceTree = "<group>";
 		};
 		71B8CB481FAAF1F0003A82FD /* NNValidationView */ = {
@@ -438,6 +437,60 @@
 				71B8CB4F1FAAF1F0003A82FD /* RNCachingURLProtocol.m */,
 			);
 			path = RNCachingURLProtocol;
+			sourceTree = "<group>";
+		};
+		71C928AA1FAB08BC0035E9E6 /* ShareSDK */ = {
+			isa = PBXGroup;
+			children = (
+				71C928AB1FAB08BC0035E9E6 /* DSXShare.h */,
+				71C928AC1FAB08BC0035E9E6 /* DSXShare.m */,
+				71C928AD1FAB08BC0035E9E6 /* DSXShareButtonItem.h */,
+				71C928AE1FAB08BC0035E9E6 /* DSXShareButtonItem.m */,
+				71C928AF1FAB08BC0035E9E6 /* DSXShareMessage.h */,
+				71C928B01FAB08BC0035E9E6 /* DSXShareMessage.m */,
+				71C928B11FAB08BC0035E9E6 /* weChatSDK */,
+				71C928B21FAB08BC0035E9E6 /* WXApiManager.h */,
+				71C928B31FAB08BC0035E9E6 /* WXApiManager.m */,
+			);
+			name = ShareSDK;
+			path = ../../CuGengForIPhone/DSXKit/ShareSDK;
+			sourceTree = "<group>";
+		};
+		71C928B11FAB08BC0035E9E6 /* weChatSDK */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = weChatSDK;
+			sourceTree = "<group>";
+		};
+		71C928B41FAB08BD0035E9E6 /* SDK */ = {
+			isa = PBXGroup;
+			children = (
+				71C928B51FAB08BD0035E9E6 /* AlipaySDK */,
+				71C928B81FAB08BD0035E9E6 /* WeChatSDK */,
+			);
+			path = SDK;
+			sourceTree = "<group>";
+		};
+		71C928B51FAB08BD0035E9E6 /* AlipaySDK */ = {
+			isa = PBXGroup;
+			children = (
+				71C928B61FAB08BD0035E9E6 /* AlipaySDK.bundle */,
+				71C928B71FAB08BD0035E9E6 /* AlipaySDK.framework */,
+			);
+			path = AlipaySDK;
+			sourceTree = "<group>";
+		};
+		71C928B81FAB08BD0035E9E6 /* WeChatSDK */ = {
+			isa = PBXGroup;
+			children = (
+				71C928B91FAB08BD0035E9E6 /* libWeChatSDK.a */,
+				71C928BA1FAB08BD0035E9E6 /* README.txt */,
+				71C928BB1FAB08BD0035E9E6 /* WechatAuthSDK.h */,
+				71C928BC1FAB08BD0035E9E6 /* WXApi.h */,
+				71C928BD1FAB08BD0035E9E6 /* WXApiObject.h */,
+			);
+			path = WeChatSDK;
 			sourceTree = "<group>";
 		};
 		9CFEF79374BF2F8715E950A3 /* Pods */ = {
@@ -510,9 +563,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71C928C21FAB08BE0035E9E6 /* AlipaySDK.bundle in Resources */,
 				718411301FA97279003E42F5 /* LaunchScreen.storyboard in Resources */,
 				71B8CB621FAAF1F0003A82FD /* DSXKit.bundle in Resources */,
 				7184112D1FA97279003E42F5 /* Assets.xcassets in Resources */,
+				71C928C51FAB08BE0035E9E6 /* README.txt in Resources */,
 				718411281FA97279003E42F5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -584,15 +639,16 @@
 				71B8CB711FAAF1F0003A82FD /* DSXRefreshControl.m in Sources */,
 				71B8CB531FAAF1F0003A82FD /* DSXTableViewController.m in Sources */,
 				71B8CB5B1FAAF1F0003A82FD /* UIAlertController+DSXAdd.m in Sources */,
+				71C928BF1FAB08BE0035E9E6 /* DSXShareButtonItem.m in Sources */,
 				71B8CB5D1FAAF1F0003A82FD /* UIColor+color.m in Sources */,
 				71B8CB661FAAF1F0003A82FD /* DSXNavigationController.m in Sources */,
 				71B8CB6F1FAAF1F0003A82FD /* DSXSandboxHelper.m in Sources */,
 				71B8CB541FAAF1F0003A82FD /* DSXUIWebViewController.m in Sources */,
+				71C928C01FAB08BE0035E9E6 /* DSXShareMessage.m in Sources */,
 				71B8CB821FAAF1F0003A82FD /* NNValidationView.m in Sources */,
 				71B8CB671FAAF1F0003A82FD /* UINavigationController+style.m in Sources */,
 				71B8CB501FAAF1F0003A82FD /* DSXCollectionViewController.m in Sources */,
 				71B8CB5E1FAAF1F0003A82FD /* UIImage+DSXAdd.m in Sources */,
-				71B8CB7E1FAAF1F0003A82FD /* AESCrypt.m in Sources */,
 				71B8CB831FAAF1F0003A82FD /* Reachability.m in Sources */,
 				718411221FA97279003E42F5 /* AppDelegate.m in Sources */,
 				71B8CB5F1FAAF1F0003A82FD /* UILabel+DSXAdd.m in Sources */,
@@ -603,15 +659,13 @@
 				71B8CB841FAAF1F0003A82FD /* RNCachingURLProtocol.m in Sources */,
 				71B8CB551FAAF1F0003A82FD /* DSXWKWebViewController.m in Sources */,
 				71B8CB561FAAF1F0003A82FD /* CLLocationManager+DSXAdd.m in Sources */,
-				71B8CB7F1FAAF1F0003A82FD /* NSData+Base64.m in Sources */,
 				71B8CB6D1FAAF1F0003A82FD /* DSXDatePicker.m in Sources */,
 				71B8CB7C1FAAF1F0003A82FD /* UIView+toast.m in Sources */,
-				71B8CB811FAAF1F0003A82FD /* NSString+Base64.m in Sources */,
 				7184112B1FA97279003E42F5 /* DSXKitDemo.xcdatamodeld in Sources */,
+				71C928BE1FAB08BE0035E9E6 /* DSXShare.m in Sources */,
 				71B8CB601FAAF1F0003A82FD /* UIScrollView+Touch.m in Sources */,
 				71B8CB591FAAF1F0003A82FD /* NSDictionary+DSXAdd.m in Sources */,
 				71B8CB731FAAF1F0003A82FD /* UIScrollView+Refresh.m in Sources */,
-				71B8CB801FAAF1F0003A82FD /* NSData+CommonCrypto.m in Sources */,
 				71B8CB6C1FAAF1F0003A82FD /* DSXCookieHelper.m in Sources */,
 				71B8CB6A1FAAF1F0003A82FD /* DSXAnnotation.m in Sources */,
 				71B8CB6E1FAAF1F0003A82FD /* DSXNavigationHandler.m in Sources */,
@@ -624,6 +678,7 @@
 				71B8CB5A1FAAF1F0003A82FD /* NSURL+DSXAdd.m in Sources */,
 				71B8CB571FAAF1F0003A82FD /* NSArray+DSXAdd.m in Sources */,
 				71B8CB631FAAF1F0003A82FD /* DSXSearchBar.m in Sources */,
+				71C928C11FAB08BE0035E9E6 /* WXApiManager.m in Sources */,
 				71B8CB511FAAF1F0003A82FD /* DSXImagePickerController.m in Sources */,
 				71B8CB641FAAF1F0003A82FD /* DSXTextView.m in Sources */,
 			);
