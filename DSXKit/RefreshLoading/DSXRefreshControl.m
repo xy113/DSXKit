@@ -102,14 +102,16 @@ NSString *const DSXRefreshStateRefreshingText = @"正在努力刷新中..";
             [_scrollView setContentInset:inset];
             //[_scrollView setContentOffset:CGPointMake(0, -top) animated:YES];
         } completion:^(BOOL finished) {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                if ([self.target respondsToSelector:self.action]) {
-                    DSXRefreshMsgSend(DSXRefreshMsgTarget(self.target), self.action, self);
-                }
-                
-                if (_refreshBlock) {
-                    _refreshBlock(self);
-                }
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    if ([self.target respondsToSelector:self.action]) {
+                        DSXRefreshMsgSend(DSXRefreshMsgTarget(self.target), self.action, self);
+                    }
+                    
+                    if (_refreshBlock) {
+                        _refreshBlock(self);
+                    }
+                });
             });
         }];
     }
@@ -117,24 +119,22 @@ NSString *const DSXRefreshStateRefreshingText = @"正在努力刷新中..";
 
 //刷新结束
 - (void)endRefreshing{
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [UIView animateWithDuration:0.3 animations:^{
-            [_scrollView setContentInset:_scrollViewOriginInset];
-        } completion:^(BOOL finished) {
-            _isRefreshing = NO;
-            _imageView.hidden = NO;
-            [_indicator stopAnimating];
-            [self setRefreshState:DSXRefreshStateNormal];
-            [self updateLastUpdateTime];
-            [[NSUserDefaults standardUserDefaults] setObject:[NSDate date] forKey:_lastUpdateTimeKey];
-            [[NSUserDefaults standardUserDefaults] synchronize];
-            if (_refreshCompletionBlcok) {
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    _refreshCompletionBlcok(self);
-                });
-            }
-        }];
-    });
+    [UIView animateWithDuration:0.3 animations:^{
+        [_scrollView setContentInset:_scrollViewOriginInset];
+    } completion:^(BOOL finished) {
+        _isRefreshing = NO;
+        _imageView.hidden = NO;
+        [_indicator stopAnimating];
+        [self setRefreshState:DSXRefreshStateNormal];
+        [self updateLastUpdateTime];
+        [[NSUserDefaults standardUserDefaults] setObject:[NSDate date] forKey:_lastUpdateTimeKey];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        if (_refreshCompletionBlcok) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                _refreshCompletionBlcok(self);
+            });
+        }
+    }];
 }
 
 - (void)updateLastUpdateTime{

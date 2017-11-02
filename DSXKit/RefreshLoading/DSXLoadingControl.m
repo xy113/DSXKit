@@ -84,16 +84,17 @@ NSString *const DSXLoadingStateNoMoreDataText = @"没有更多内容了";
         [UIView animateWithDuration:0.3f animations:^{
             [_scrollView setContentInset:inset];
         } completion:^(BOOL finished) {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                if ([self.target respondsToSelector:self.action]) {
-                    DSXRefreshMsgSend(DSXRefreshMsgTarget(self.target), self.action, self);
-                }
-                
-                if (self.loadingBlock) {
-                    self.loadingBlock(self);
-                }
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    if ([self.target respondsToSelector:self.action]) {
+                        DSXRefreshMsgSend(DSXRefreshMsgTarget(self.target), self.action, self);
+                    }
+                    
+                    if (self.loadingBlock) {
+                        self.loadingBlock(self);
+                    }
+                });
             });
-            
         }];
     }
 }
@@ -102,15 +103,13 @@ NSString *const DSXLoadingStateNoMoreDataText = @"没有更多内容了";
     [UIView animateWithDuration:0.3 animations:^{
         [_scrollView setContentInset:_scrollViewOriginInset];
     } completion:^(BOOL finished) {
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            _isLoading = NO;
-            [_indicator stopAnimating];
-            [self setLoadingState:DSXLoadingStateNormal];
-            dispatch_async(dispatch_get_main_queue(), ^{
-                if (self.loadingCompletionBlock) {
-                    self.loadingCompletionBlock(self);
-                }
-            });
+        _isLoading = NO;
+        [_indicator stopAnimating];
+        [self setLoadingState:DSXLoadingStateNormal];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (self.loadingCompletionBlock) {
+                self.loadingCompletionBlock(self);
+            }
         });
     }];
 }
